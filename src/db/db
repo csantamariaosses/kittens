@@ -1,0 +1,24 @@
+
+const mysql = require("mysql")
+const util = require("util")
+
+const pool = mysql.createPool ({
+  connectionLimit: 10,
+  host:"localhost",
+  database:"kittens",
+  user:"root",
+  passord:""
+
+});
+
+pool.getConnection( (err, connection) => {
+  if( err ) {
+    console.warn("No se pudo conectar:" , {error:err})
+  } else {
+    console.log("Conexion exitosa")
+  }
+});
+
+pool.query = util.promisify(pool.query)
+
+module.exports = pool

@@ -1,0 +1,40 @@
+ EDIT RAZA
+ 
+ <div class="row">
+      <div class="md-4"></div>
+      <div class="md-4">
+        <div class="card carga-datos">
+            <div class="card-header">EDITAR INFO RAZAS
+            </div>
+            <div class="card-body">
+              <form class="form" action="/razas-update/{{raza.id}}" method="post" enctype="multipart/form-data">
+
+                <input type="hidden" name="id" value="{{ raza.id}}">
+                <div class="mb-3">
+                  <input type="text" name="raza" value="{{raza.raza}}" placeholder="Raza..." autofocus required>
+                </div>
+                <div class="mb-3">
+                  <textarea name="caracteristicas" rows="5" cols="50" placeholder="Caracteristicas..." required>{{raza.caracteristicas}}</textarea>
+                </div>
+                <div class="mb-3">
+                  <textarea name="detalles" rows="5" cols="50" placeholder="Detalles..." required>{{raza.detalles}}</textarea>
+                </div>
+                
+                <div class="mb-3">
+                  <p>Imagen actual</p>
+                  <img src="/images/{{raza.imagen}}" alt="{{raza.imagen}}" width="300">
+                </div>
+                <div class="mb-3">
+                  <label for="imagen">Seleccione una imagen</label>
+                  <input id="imagen" type="file" name="imagen" accept=".jpg, .gif, .png">  
+                </div>
+                
+                <div class="btn">
+                  <input type="submit" value="Guardar">
+                  <a href="/razas"><input type="button" value="Cancelar"></a>
+                </div> 
+              </form>
+            </div>  <!-- card body -->
+        </div>
+      </div>  <!-- cierra mb-4-->
+</div>  <!-- row -->

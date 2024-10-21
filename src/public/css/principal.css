@@ -1,0 +1,31 @@
+nav ul {
+  list-style-type: none; /* Quitamos las viñetas de la lista */
+}
+nav li {
+  display: inline; /* Ítems del menú en una línea horizontal */ 
+}
+
+
+footer {
+  text-align: center;
+  background-color: darkslategrey;
+  color:aliceblue;
+}
+
+/*
+.color-beige {
+  background-color: bisque;
+}
+*/
+.card {
+  background-image: url("/images/textura-pelo-gato-2.jpg");
+}
+
+.card-header {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:x-large;
+}
+
+.card-body input, textarea {
+  margin-left: 10px;
+}

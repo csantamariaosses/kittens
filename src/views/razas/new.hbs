@@ -1,0 +1,36 @@
+<div class="container">
+  NEW RAZA
+  <div class="row">
+    <div class="md-4"></div>
+    <div class="md-4">
+      <div class="card carga-datos">
+        <div class="card-header">CARGA INFO RAZAS</div>
+        <div class="card-body">
+          <form class="form" action="/razas-save" method="POST" enctype="multipart/form-data">
+
+            <div class="mb-3">
+              <input type="text" name="raza" placeholder="Raza..." autofocus required>
+            </div>
+            <div class="mb-3">
+              <textarea name="caracteristicas" rows="5" cols="50" placeholder="Caracteristicas..." required></textarea>
+            </div>
+            <div class="mb-3">
+              <textarea name="detalles" rows="5" cols="50" placeholder="Detalles..." required></textarea>
+            </div>
+            
+            <div class="mb-3">
+              <label for="imagen">Seleccione una imagen</label>
+              <input id="imagen" type="file" name="imagen" accept=".jpg, .gif, .png" required>
+            </div>
+
+            <div class="btn">
+              <input type="submit" value="Subir">
+              <a href="/razas"><input type="button" value="Cancelar"></a>
+            </div>
+          </form>
+        </div> <!-- body-->
+      </div>  <!-- card -->
+    </div>   <!-- md4 -->
+    <div class="md-4"></div>
+  </div>
+</div>
