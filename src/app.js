@@ -1,7 +1,8 @@
-require("dotenv").config()
+const dotenv = require('dotenv')
 
 const express = require('express')
 const app = express()
+
 const PORT = process.env.PORT || 3000
 const hbs = require("express-handlebars")
 const session = require('express-session')
@@ -26,6 +27,9 @@ const morgan = require("morgan")
 app.use(express.urlencoded({extended: true})); //Esto es para formData
 app.use(express.json())
 
+//dotenv.config({ path: path.join(__dirname, '..', '.env.testing') });
+dotenv.config({ path: path.join(__dirname, '.env') });
+
 
 // proteccion de rutas
 function auth(req, res, next ){
@@ -41,7 +45,6 @@ function auth(req, res, next ){
 
 //DDBB
 const pool = require("../src/db/db")
-
 const razas = require("../src/models/razas")
 
 
@@ -94,6 +97,8 @@ app.use(logoutRouter)
   res.send("LOGIN")
 })
 */
+
+
 
 
 // Listening
